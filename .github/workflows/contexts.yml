@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ github.actor }}, ${{ runner.name }}"
-      - run: echo "${{ github.event.pull_request.title }}, ${{ github.head_ref }}"
+      - run: echo "${{ runner.os }}, ${{ github.repository }}"
