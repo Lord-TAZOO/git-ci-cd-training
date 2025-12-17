@@ -1,0 +1,8 @@
+name: Intermediate environment variables
+on: push
+jobs:
+  runs-on: ubuntu-latest
+  env:
+    ACTOR: ${{ github.actor }}
+  steps:
+    - run: echo "${ACTOR}" #コンテキストはシェルに直書きしない(特殊文字がシェルの実行に意図しない影響を与えるため)
